@@ -50,22 +50,7 @@ max_decrease_value = min(monthly_profit_change)
 max_increase_month = monthly_profit_change.index(max(monthly_profit_change)) +1
 max_decrease_month = monthly_profit_change.index(min(monthly_profit_change)) +1
 
-
-
-
-
-
-
-#6 - Print and Output 
-#print(f'Financial Analysis')
-#print(f'-------------------------------')
-#print("Total Months:  {mcount}")
-#print("Total: $ {total}")
-#print("Average  Change:  {avg}")
-#print("Greatest Increase in Profits:  {DiffMaxDate} : ($ {DiffMax})")
-#print("Greatest Decrease in Profits:  {DiffMinDate} : ($ {DiffMin})")
-
-
+#Print
 print("Financial Analysis")
 print("-------------------------")
 print(f"Total Months: {len(total_months)}")
@@ -78,11 +63,7 @@ print(f"Greatest Decrease in Profits: {total_months[max_decrease_month]} (${(str
 data_output = os.path.join('Resources','pybank_data.csv')
 
 ##Write data to .csv
-#with open(data_output, "w", newline="") as csvfile:
-#    writer = csv.writer(csvfile)
-#    writer.writerow(["row1", "row2", "row3", "row4", "row5", "row6"])
-
-with open(file_to_output, "w") as file:
+with open(output_file, "w") as file:
     file.write("Financial Analysis")
     file.write("\n")
     file.write("----------------------------")
