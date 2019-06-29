@@ -70,7 +70,7 @@ print(f"Winner: {key}")
 print(f"----------------------------")
 
 #Output files
-output_file = os.path.join('Resources', 'election_results.csv')
+output_file = os.path.join('Resources', 'election_results.txt')
 
 with open(output_file, "w") as file:
 

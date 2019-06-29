@@ -57,9 +57,9 @@ print(f"Greatest Increase in Profits: {total_months[max_increase_month]} (${(str
 print(f"Greatest Decrease in Profits: {total_months[max_decrease_month]} (${(str(max_decrease_value))})")
 
 ##Create path
-data_output = os.path.join('Resources','pybank_analysis.csv')
+data_output = os.path.join('Resources','pybank_analysis.txt')
 
-##Write data to .csv
+##Write data to .txt
 with open(data_output, "w") as file:
     file.write("Financial Analysis")
     file.write("\n")
