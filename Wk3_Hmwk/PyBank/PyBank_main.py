@@ -19,10 +19,7 @@ monthly_profit_change = []
 #read in csvfile 
 with open(budget_path, newline='') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
-    # Read the header row first (skip this step if there is now header)
     csv_header = next(csvreader)
-    #print(f"CSV Header: {csv_header}")
-
 
 #1 - The total number of months included in the dataset
 #2 - The net total amount of "Profit/Losses" over the entire period   
@@ -60,10 +57,10 @@ print(f"Greatest Increase in Profits: {total_months[max_increase_month]} (${(str
 print(f"Greatest Decrease in Profits: {total_months[max_decrease_month]} (${(str(max_decrease_value))})")
 
 ##Create path
-data_output = os.path.join('Resources','pybank_data.csv')
+data_output = os.path.join('Resources','pybank_analysis.csv')
 
 ##Write data to .csv
-with open(output_file, "w") as file:
+with open(data_output, "w") as file:
     file.write("Financial Analysis")
     file.write("\n")
     file.write("----------------------------")
